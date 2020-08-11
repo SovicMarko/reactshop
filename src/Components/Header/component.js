@@ -22,9 +22,9 @@ const Header = (props) => {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="/">
               Logo
-            </a>
+            </Link>
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav">
