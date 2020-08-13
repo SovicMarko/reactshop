@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Candy Mašina za sušenje veša CSO C8TE S",
+        "image": "https://static.tehnomanija.rs/UserFiles/products/143191.jpg",
+        "price": 39989,
+        "discount": 0.2
+    },
+    {
+        "id": 2,
+        "name": "ROWENTA Usisivač sa posudom RO 3786, 750 W",
+        "image": "https://static.tehnomanija.rs/UserFiles/products/84039.jpg",
+        "price": 18749,
+        "discount": 0.1
+    },
+    {
+        "id": 3,
+        "name": "SAMSUNG Side by side frižider RS 68N8240WW EF",
+        "image": "https://static.tehnomanija.rs/UserFiles/products/133780_(1).jpg",
+        "price": 185999
+    }
+]

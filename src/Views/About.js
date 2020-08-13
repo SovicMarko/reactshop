@@ -1,11 +1,12 @@
 import React from "react";
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
+import PageTitle from "../Components/Shared/PageTitle";
 
 const About = (props) => {
   return (
-    <>
-      <h1>About page</h1>
-    </>
+    <div className="container">
+      <PageTitle title="About Page" />
+    </div>
   );
 };
 

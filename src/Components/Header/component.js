@@ -1,11 +1,22 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+// import { connect } from 'react-redux';
 
 const Header = (props) => {
+  const counter = useSelector(state => state.cartCount);
+
   const Nav = styled.nav`
     border-radius: 0px;
   `;
+
+  const style = {
+    cart: {
+      backgroundColor: "green",
+      marginTop: '-5px'
+    }
+  }
 
   return (
     <>
@@ -40,16 +51,24 @@ const Header = (props) => {
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <a href="#">
+                <Link to="/add">
+                  <span className="glyphicon glyphicon-plus"></span>&nbsp;
+                Add product
+                </Link>
+              </li>
+              <li>
+                <a href="/">
                   <span className="glyphicon glyphicon-user"></span> Your
                   Account
                 </a>
               </li>
               <li>
-                <a href="#">
+                <Link to="/cart">
+
                   <span className="glyphicon glyphicon-shopping-cart"></span>{" "}
-                  Cart
-                </a>
+
+                  Cart  &nbsp;<span className="badge" style={style.cart}>{counter}</span>&nbsp;
+                </Link>
               </li>
             </ul>
           </div>

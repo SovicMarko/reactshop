@@ -1,12 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+import rootReducer from './reducers/index.js'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+
+// const store = createStore(rootReducer, {
+//   cartCount: cart.length
+// });
+
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+
+// store.dispatch({ type: 'INITIAL' })
+
+console.log(store.getState());
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App store={store} />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,14 +1,20 @@
 import React from "react";
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
+import data from "../TestData/data.json";
 
 const Shop = ({ match }) => {
-  const id = match.params.id;
+  const id = Number(match.params.id);
+  let product = {};
+  data.forEach(el => {
+    if (el.id === id) {
+      product = el;
+    }
+  });
 
   return (
-    <>
-      <h1>Shop page</h1>
-      <h1>{id}</h1>
-    </>
+    <div className="container">
+      <h1>{product.name}</h1>
+    </div>
   );
 };
 
