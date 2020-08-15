@@ -8,8 +8,10 @@ import Contact from "./Views/Contact";
 import Home from "./Views/Home";
 import Shop from "./Views/Shop";
 import Cart from "./Views/Cart";
+import Profile from "./Views/Profile";
 
 import AddProduct from "./Views/Admin/AddProduct";
+import Products from "./Views/Admin/Products";
 
 import { useDispatch } from "react-redux";
 import { change } from "./actions";
@@ -34,8 +36,12 @@ function App(props) {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/shop/:id" component={Shop} />
-        <Route path="/cart" component={() => <Cart store={props.store} />} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/profile" component={Profile} />
+        {/* -----------A D M I N-------------- */}
         <Route path="/add" component={AddProduct} />
+        <Route path="/products" component={Products} />
+
       </Switch>
     </Router>
   );

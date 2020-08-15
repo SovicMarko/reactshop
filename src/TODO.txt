@@ -1,0 +1,2 @@
+// Full Stack React & Firebase Tutorial - Build a social media app
+// https://www.youtube.com/watch?v=m_u6P5k0vP0

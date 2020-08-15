@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 import rootReducer from './reducers/index.js'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import FirebaseProvider from './firebase/firebase'
 
 
 
@@ -27,7 +29,9 @@ console.log(store.getState());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App store={store} />
+      <FirebaseProvider>
+        <App />
+      </FirebaseProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

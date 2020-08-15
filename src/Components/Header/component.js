@@ -51,16 +51,19 @@ const Header = (props) => {
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>
+                <Link to="/products">Products</Link>
+              </li>
+              <li>
                 <Link to="/add">
                   <span className="glyphicon glyphicon-plus"></span>&nbsp;
                 Add product
                 </Link>
               </li>
               <li>
-                <a href="/">
+                <Link to="/profile">
                   <span className="glyphicon glyphicon-user"></span> Your
                   Account
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/cart">

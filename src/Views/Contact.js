@@ -2,12 +2,10 @@ import React from "react";
 // import styled from "@emotion/styled";
 import PageTitle from "../Components/Shared/PageTitle";
 
-const Contact = (props) => {
-  return (
-    <div className="container">
-      <PageTitle title="Contact" />
-    </div>
-  );
-};
+const Contact = () => (
+  <div className="container">
+    <PageTitle title="Contact" />
+  </div>
+);
 
 export default Contact;
